@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+:root{
+--Blue: hsl(246, 80%, 60%);
+--Light-red-work: hsl(15, 100%, 70%);
+--Soft-blue-play: hsl(195, 74%, 62%);
+--Light-red-study: hsl(348, 100%, 68%);
+--Lime-green-exercise: hsl(145, 58%, 55%);
+--Violet-social: hsl(264, 64%, 52%);
+--Soft-orange-self-care: hsl(43, 84%, 65%);
+--Very-dark-blue: hsl(226, 43%, 10%);
+--Dark-blue: hsl(235, 46%, 20%);
+--Desaturated-blue: hsl(235, 45%, 61%);
+--Pale-Blue: hsl(236, 100%, 87%);
+}
+
+
+.header .profile .name{
+    background-color: var(--Desaturated-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px 30px 30px 20px;
+    position: relative;
+    z-index: 5;
+}
+.header .profile  .times{
+    background-color:var(--Dark-blue) ;
+    color: var(--Pale-Blue);
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    top: -16px;
+    
+}
+.header .profile  .times h6{
+    font-size: 18px;
+    line-height: 2;
+}
+@media (min-width:992px) and (max-width:1199px){
+    .header .profile .times{
+        height: 254px;
+        padding: 65px 30px 30px 30px;
+    }
+}
+@media (min-width:1200px){
+    .header .profile .times{
+        height: 286px;
+        padding: 65px 30px 30px 30px;
+    }
+}
+.header .profile .name img{
+    width: 78px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.header .profile .name .report_for{
+    margin-top: 10px;
+    font-size: 13px;
+    color: white;
+}
+.header .profile .name h6{
+    margin-top: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+}
+.header .activities{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(226px,1fr));
+gap: 4px;
+}
+.header .activities .activiti .img{
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+.header .activities .activiti .img img{
+    width: 20%;
+    margin-right: 10px;
+    height: 60px;
+    object-fit: cover;
+}
+.header .activities .activiti .img::after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 100px;
+    left: 0;
+    border-radius: 10px;
+    z-index: -1;
+}
+.header .activities .activiti.work .img::after{
+    background-color: var(--Light-red-work);
+}
+.header .activities .activiti.play .img::after{
+    background-color: var(--Soft-blue-play);
+}
+.header .activities .activiti.Study .img::after{
+    background-color: var(--Light-red-study);
+}
+.header .activities .activiti.Exercise .img::after{
+    background-color: var(--Lime-green-exercise);
+}
+.header .activities .activiti.Social .img::after{
+    background-color: var(--Violet-social);
+}
+.header .activities .activiti.Self_Care .img::after{
+    background-color: var(--Soft-orange-self-care);
+}
+
+.header .activities .activiti .work-content .title{
+    height: 42px;
+}
+.header .activities .activiti .work-content{
+    background: var(--Very-dark-blue);
+    color: wheat;
+    border-radius: 10px;
+    position: relative;
+    top:-16px;
+}
+.header .activities .activiti .work-content:hover{
+    background-color: var(--Dark-blue);
+    top: -40px;
+    transition: ease-in-out 0.5s;
+}
+.header .activities .activiti .work-content p,svg,h3{
+    color: white;
+}
+.header .activities .activiti .work-content .title p{
+    font-size: 15px;
+    font-weight: 600;
+}
+.header .activities .activiti .work-content .para{
+    font-size: 14px;
+    color: var(--Pale-Blue);
+}
